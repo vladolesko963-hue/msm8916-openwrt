@@ -209,3 +209,24 @@ CONFIG_VERSION_CODE=""
 CONFIG_VERSION_REPO="https://akbar-npj.github.io/msm8916-openwrt/releases/25.12.6"
 CONFIG_VERSION_HOME_URL="https://github.com/akbar-npj/msm8916-openwrt"
 CONFIG_VERSION_BUG_URL="https://github.com/akbar-npj/msm8916-openwrt/issues"
+
+# Модули ядра для Zapret (nfqws + nftables)
+CONFIG_PACKAGE_kmod-nft-queue=y
+CONFIG_PACKAGE_kmod-nfnetlink-queue=y
+CONFIG_PACKAGE_kmod-nft-nat=y
+CONFIG_PACKAGE_kmod-nft-offload=y
+
+# Модули ядра для Mihomo (Clash.Meta) и прозрачного роутинга (Steer / PBR)
+CONFIG_PACKAGE_kmod-tun=y
+CONFIG_PACKAGE_kmod-nft-tproxy=y
+CONFIG_PACKAGE_kmod-nft-socket=y
+CONFIG_PACKAGE_kmod-inet-diag=y
+CONFIG_PACKAGE_kmod-netem=y
+
+# Системные утилиты и сеть
+CONFIG_PACKAGE_ip-full=y
+CONFIG_PACKAGE_ca-bundle=y
+CONFIG_PACKAGE_curl=y
+CONFIG_PACKAGE_jq=y
+CONFIG_PACKAGE_kmod-zram=y
+CONFIG_PACKAGE_zram-swap=y
